@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>quiz</title>
+</head>
+<body>
+<script type="text/javascript">
+	let min=+prompt('min?', 0)
+	let max=+prompt('max?',100)
+	let numX= min+Math.round(Math.random()*(max-min));
+    let count=0;
+	
+	do{numUser = prompt("вгадайте число від " + min + "до" + max, " ");
+	count++;
+	if (numUser===null) {
+		alert("Ми чекали від вас число");
+	} else if (+numUser<numX) {
+		alert("Ваше число меньше");
+	}
+	else if (+numUser>numX) {
+		alert("Ваше число більше");
+
+	} else{
+		alert("Ура!!! Вгадали!!!"+numX+" за спроб:"+ count); }
+	} while(numUser!= numX && numUser != null);
+</script>
+
+</body>
+</html>
